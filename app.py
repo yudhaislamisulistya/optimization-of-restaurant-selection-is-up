@@ -67,15 +67,15 @@ def price_to_category(price):
     
 def rating_to_category(rating):
     if rating >= 4.0:
-        return 0
+        return 4
     elif rating >= 3.0:
-        return 1
+        return 3
     elif rating >= 2.0:
         return 2
     elif rating >= 1.0:
-        return 3
+        return 1
     else:
-        return 4
+        return 0
     
 label_encoding(df, 'jenis')
 df['jarak'] = df['jarak'].apply(lambda x: distance_to_category(x))
